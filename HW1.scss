@@ -1,0 +1,579 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+//待更改：導覽列RWD、main#mainBlock div.blue
+
+header{
+    position:sticky;
+    top:0;
+    z-index:99;
+        
+    section#top{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        background-color: white;
+        padding:0 0 0 0.5rem;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 10);
+
+        span.title{
+            display:flex; 
+            align-items: center;
+
+            img{
+                width:3rem;
+                height:3rem;
+            }
+
+            h1{
+                font-weight:normal;
+                font-size:1.5rem;
+                padding:0.5rem;
+            }
+        }
+
+        nav.navbar{
+            height:100%;
+            width: 45vw;
+
+            ul{
+                display:flex;
+                font-size: 1.2rem;
+                font-weight:550;
+                display:flex;
+                justify-content: space-between;
+                list-style-type: none;
+                
+                li{
+                    cursor:pointer;
+                    display:flex;
+                    flex-direction:row;
+                    align-items: center;
+                    justify-content:center;
+
+                    a{
+                        padding:1rem 0.6rem;
+                        text-decoration: none;
+                        color:black;
+                    }
+                }
+
+                li:hover{
+                    background-color:#c4c4c4;
+                }
+                
+            }
+        }
+    }
+}
+
+main{
+
+    section#cover{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: flex-end;
+        background-attachment: fixed;
+        min-height:65vh;
+        width:100%;
+        background-image:url(./aurora.JPG);
+        background-size:cover;
+        background-position:center;
+
+        section#words{
+            padding-right:6%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            color:white;
+            font-weight:lighter;
+
+            img{
+                margin:0.8rem 0.2rem;
+                cursor:pointer;
+                height:2.5rem;
+                width:2.5rem;
+            }
+
+            h1{
+                font-size: 70px;
+            }
+
+            h2{
+                font-size:35px;
+            }
+        }        
+        
+    }
+
+    section#title{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:5rem;
+
+        h3{
+            margin:0.2rem;
+            color:#1d1936;
+            font-size:2.5rem;
+            font-weight:bolder;
+        }
+    }
+
+    section#mainBlock{
+        display:flex;
+        justify-content:space-around;
+        flex-wrap:wrap;
+
+        div.blue{
+            background-color:#242f4f;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            align-items:center;
+            height:350px;
+            width:410px;
+            
+            img.bluePhoto{
+                height:62%;
+                width:80%;
+            }
+
+            h4{
+                color:white;
+                font-size:2rem;
+            }
+
+            
+        }
+
+        div.blue:hover{
+            cursor:pointer;
+            transform:scale(1.1,1.1);
+        }
+    }
+
+    section#Podcast{
+
+        section#sunset{
+        margin-top:2rem;
+        margin-bottom:1rem;
+        min-height:50vh;
+        width:100%;
+        background-image:url(./sunset.png);
+        background-size:cover;
+        background-position:center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        
+
+        div#grey{
+            background-color:rgba(0,0,0,0.5);
+            min-height:50vh;
+            width:100%;
+            position:absolute;
+        }
+
+        h3{
+            position:relative;
+            display:flex;
+            justify-content:center;
+            color:white;
+            font-size:4rem;
+            font-weight:bold;
+        }
+
+        section#covers, section#topChannels, section#bottomChannels{
+            display:flex;
+            justify-content:center;
+            width:100vw;
+            flex-wrap:wrap;
+
+            img{
+                width:200px;
+                height:200px;
+                margin:1rem;
+        }
+    }
+
+        img:hover{
+            cursor:pointer;
+            outline:none;
+        }
+
+        section#topChannels{
+            position:relative;
+            z-index:5;
+        }
+
+        section#covers{
+            position:absolute;
+            z-index:10;
+
+            img:hover{
+                transform:rotateY(90deg);
+                transition:0.2s;
+                perspective: 1000px;
+                cursor:pointer;
+            }
+        }
+
+    }
+
+}
+
+footer{
+    flex-wrap:wrap;
+    margin-top:1rem;
+    min-height:10vh;
+    width:100%;
+    background-color:#c4c4c4;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    h3{
+        font-size:2rem;
+        margin:1rem;
+        justify-content: center;
+    }
+
+    div.email{
+        display:flex;
+        justify-content: center;
+
+        img{
+            margin:0 1rem;
+            height:15%;
+            width:15%;
+        }
+
+        img:hover{
+            cursor:pointer;
+        }
+
+        p{
+            font-size:1.2rem;
+        }
+    }
+
+    div.icon{
+        display:flex;
+        justify-content: center;
+
+        img{
+            cursor:pointer;
+            margin:1rem 0.5rem;
+            height:40px;
+            width:40px;
+        }
+    }
+}
+
+@media screen and (max-width:1300px){
+    header{
+        section#top{
+
+            nav.navbar{
+                ul{
+                    font-size:0.9rem;                    
+                }
+            }
+        }
+    }
+
+    main{
+        section#cover{
+            background-image:url(./aurora.JPG);
+            background-size:cover;
+            background-position:center;
+            min-height:35vh;
+    
+            section#words{
+                padding-right:8rem;
+
+                h1{
+                    font-size:40px;
+                }
+        
+                h2{
+                    font-size:20px;
+                }
+
+                section#icons{
+                    img{
+                        width:1.5rem;
+                        height:1.5rem;
+                    }
+                }
+            }
+        }
+
+        section#title{
+            margin:2rem;
+
+            h3{ 
+                margin:0.5rem;
+                font-size:1.2rem;
+            }
+        }
+
+        section#mainBlock{
+            div.blue{
+                margin:0.6rem;
+                padding:1rem;
+            }
+        }
+
+        section#Podcast{
+            section#sunset{
+                min-height:30vh;
+                h3{
+                    font-size:2.5rem;
+                }
+            }
+
+            div#grey{
+                min-height:30vh;
+            }
+        }
+
+    }
+
+    footer{
+        h3{
+            font-size:1.6rem;
+        }
+
+        div.email{
+            img{
+                margin:0.1rem 0.5rem 0 0.5rem;
+                height:13%;
+                width:13%;
+            }
+            
+            p{
+                font-size:1.2rem;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:1030px){
+    header{
+        section#top{
+            display:flex;
+            flex-direction:column;
+
+            span.title{
+                img{
+                    width:2rem;
+                    height:2rem;
+                }
+
+                h1{
+                    font-size:1.5rem;
+                }
+            }
+
+            nav.navbar{
+                width:100vw;
+                ul{
+                    font-size:1rem;
+                    display:flex;
+                    flex-direction:column;
+                    li{
+                        background-color: #e9e9e9;
+                        border:0.01rem solid white;
+                        a{
+                            padding:0.4rem 0;
+                            
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+    main{
+        section#cover{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            section#words{
+                padding:0;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:580px){
+    header{
+        section#top{
+
+            span.title{
+                img{
+                    width:1.8rem;
+                    height:1.8rem;
+                }
+
+                h1{
+                    font-size:1.2rem;
+                }
+            }
+        }
+    }
+
+    main{
+        section#cover{
+            background-image:url(./aurora.JPG);
+            background-size:cover;
+            background-position:center;
+            min-height:26vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items: center;
+    
+            section#words{
+                align-items:center;
+                padding:0 1.4rem;
+
+                h1{
+                    font-size:28px;
+                }
+        
+                h2{
+                    font-size:15px;
+                }
+
+                img{
+                    height:1rem;
+                }
+
+                section#icons{
+                    img{
+                        width:1.5rem;
+                        height:1.5rem;
+                    }
+                }
+            }
+        }
+
+        section#title{
+            margin:0.8rem;
+
+            h3{ 
+                font-size:1.1rem;
+            }
+        }
+
+        section#mainBlock{
+            div.blue{
+                margin:0.6rem;
+            }
+        }
+
+        section#Podcast{
+            section#sunset{
+                h3{
+                    font-size:1.6rem;
+                }
+            }
+
+            section#sunset{
+                min-height:20vh;
+                }
+                
+        
+                div#grey{
+                    min-height:20vh;
+                }
+        }
+    }
+    
+    footer{
+        h3{
+            font-size:1.2rem;
+        }
+
+        div.email{
+            img{
+                margin:0.3rem 0.5rem 0 0.5rem;
+                height:10%;
+                width:10%;
+            }
+            
+            p{
+                font-size:1rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:390px){
+    main{
+        section#cover{
+            background-image:url(./aurora.JPG);
+            background-size:cover;
+            background-position:center;
+            min-height:25vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items: center;
+
+            section#words{
+                align-items:center;
+                padding:0 1.4rem;
+
+                h1{
+                    font-size:24px;
+                }
+        
+                h2{
+                    font-size:14px;
+                }
+
+                section#icons{
+                    img{
+                        width:1.5rem;
+                        height:1.5rem;
+                    }
+                }
+            }
+        }
+
+        section#title{
+            margin:0.8rem;
+
+            h3{ 
+                font-size:0.9rem;
+            }
+        }
+    
+        section#mainBlock{
+
+            div.blue{
+                margin:0.6rem 2rem;
+            }
+        }
+
+    }
+}
