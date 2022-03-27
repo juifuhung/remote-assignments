@@ -339,19 +339,42 @@ footer div.email {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-footer div.email img {
-  margin: 0 1rem;
+footer div.email a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 15%;
   width: 15%;
+  margin-right: 0.5rem;
 }
 
-footer div.email img:hover {
+footer div.email a img {
+  height: 100%;
+  width: 100%;
+}
+
+footer div.email a:hover {
   cursor: pointer;
 }
 
 footer div.email p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2rem;
 }
 
@@ -417,17 +440,17 @@ footer div.icon img {
   footer h3 {
     font-size: 1.6rem;
   }
-  footer div.email img {
-    margin: 0.1rem 0.5rem 0 0.5rem;
-    height: 13%;
-    width: 13%;
+  footer div.email a {
+    height: 12%;
+    width: 12%;
+    margin-right: 0.5rem;
   }
-  footer div.email p {
+  footer div.email a p {
     font-size: 1.2rem;
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1300px) and (max-width: 1030px) {
   header section#top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -466,7 +489,7 @@ footer div.icon img {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) and (max-width: 900px) {
   main section#cover {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -484,7 +507,7 @@ footer div.icon img {
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 1300px) and (max-width: 580px) {
   header section#top span.title img {
     width: 1.8rem;
     height: 1.8rem;
@@ -551,17 +574,17 @@ footer div.icon img {
   footer h3 {
     font-size: 1.2rem;
   }
-  footer div.email img {
-    margin: 0.3rem 0.5rem 0 0.5rem;
+  footer div.email a {
     height: 10%;
     width: 10%;
+    margin-right: 0.3rem;
   }
-  footer div.email p {
+  footer div.email a p {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 1300px) and (max-width: 390px) {
   main section#cover {
     background-image: url(./aurora.JPG);
     background-size: cover;
