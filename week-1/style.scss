@@ -256,18 +256,29 @@ footer{
     div.email{
         display:flex;
         justify-content: center;
+        align-items:center;
 
-        img{
-            margin:0 1rem;
+        a{
+            display:flex;
+            justify-content:center;
+            align-items:center;
             height:15%;
             width:15%;
+            margin-right:0.5rem;
+
+            img{
+                height:100%;
+                width:100%;
+            }
         }
 
-        img:hover{
+        a:hover{
             cursor:pointer;
         }
 
         p{
+            display:flex;
+            align-items:center;
             font-size:1.2rem;
         }
     }
@@ -360,17 +371,17 @@ footer{
             font-size:1.6rem;
         }
 
-        div.email{
-            img{
-                margin:0.1rem 0.5rem 0 0.5rem;
-                height:13%;
-                width:13%;
+        div.email{    
+            a{
+                height:12%;
+                width:12%;
+                margin-right:0.5rem;
+                
+                p{
+                    font-size:1.2rem;
+                }
+                
             }
-            
-            p{
-                font-size:1.2rem;
-            }
-        }
     }
     
 }
@@ -517,15 +528,16 @@ footer{
             font-size:1.2rem;
         }
 
-        div.email{
-            img{
-                margin:0.3rem 0.5rem 0 0.5rem;
+        div.email{    
+            a{
                 height:10%;
                 width:10%;
-            }
-            
-            p{
-                font-size:1rem;
+                margin-right:0.3rem;
+                
+                p{
+                    font-size:1rem;
+                }
+                
             }
         }
     }
@@ -581,4 +593,5 @@ footer{
         }
 
     }
+}
 }
