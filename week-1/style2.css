@@ -95,6 +95,16 @@ header section#top nav.navbar ul li:hover {
   background-color: #c4c4c4;
 }
 
+header section#top div.container {
+  display: none;
+  background-color: white;
+}
+
+header section#top div.container div.bar1, header section#top div.container div.bar2, header section#top div.container div.bar3 {
+  height: 0.1px;
+  background-color: black;
+}
+
 main section#cover {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,14 +461,8 @@ footer div.icon img {
 }
 
 @media screen and (max-width: 1300px) and (max-width: 1030px) {
-  header section#top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  header section#top nav.navbar {
+    width: 60%;
   }
   header section#top span.title img {
     width: 2rem;
@@ -467,29 +471,12 @@ footer div.icon img {
   header section#top span.title h1 {
     font-size: 1.5rem;
   }
-  header section#top nav.navbar {
-    width: 100vw;
-  }
-  header section#top nav.navbar ul {
-    font-size: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header section#top nav.navbar ul li {
-    background-color: #e9e9e9;
-    border: 0.01rem solid white;
-  }
-  header section#top nav.navbar ul li a {
-    padding: 0.4rem 0;
-  }
 }
 
 @media screen and (max-width: 1300px) and (max-width: 900px) {
+  header section#top nav.navbar li {
+    font-size: 0.8rem;
+  }
   main section#cover {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -507,13 +494,41 @@ footer div.icon img {
   }
 }
 
-@media screen and (max-width: 1300px) and (max-width: 580px) {
+@media screen and (max-width: 1300px) and (max-width: 750px) {
+  header section#top nav.navbar {
+    display: none;
+  }
   header section#top span.title img {
     width: 1.8rem;
     height: 1.8rem;
   }
   header section#top span.title h1 {
     font-size: 1.2rem;
+  }
+  header section#top div.container {
+    margin-right: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 36px;
+    height: 36px;
+    border: solid 1.5px black;
+    border-radius: 0.5rem;
+    padding: 1px 0;
+    cursor: pointer;
+  }
+  header section#top div.container div.bar1, header section#top div.container div.bar2, header section#top div.container div.bar3 {
+    height: 3px;
+    width: 70%;
   }
   main section#cover {
     background-image: url(./aurora.JPG);
@@ -630,4 +645,4 @@ footer div.icon img {
     margin: 0.6rem 2rem;
   }
 }
-/*# sourceMappingURL=HW1.css.map */
+/*# sourceMappingURL=style.css.map */
