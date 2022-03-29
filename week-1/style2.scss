@@ -5,7 +5,7 @@
     font-family: "Noto Sans TC", sans-serif;
 }
 
-//待更改：導覽列RWD、main#mainBlock div.blue
+//待更改：main#mainBlock div.blue
 
 header{
     position:sticky;
@@ -69,6 +69,17 @@ header{
                 
             }
         }
+
+        div.container{
+            display:none;
+            background-color:white;
+    
+            div.bar1, div.bar2, div.bar3{
+                height:0.1px;
+                background-color:black;
+            }
+        }
+        
     }
 }
 
@@ -389,8 +400,9 @@ footer{
 @media screen and (max-width:1030px){
     header{
         section#top{
-            display:flex;
-            flex-direction:column;
+            nav.navbar{
+                width:60%;
+            }
 
             span.title{
                 img{
@@ -401,30 +413,22 @@ footer{
                 h1{
                     font-size:1.5rem;
                 }
-            }
-
-            nav.navbar{
-                width:100vw;
-                ul{
-                    font-size:1rem;
-                    display:flex;
-                    flex-direction:column;
-                    li{
-                        background-color: #e9e9e9;
-                        border:0.01rem solid white;
-                        a{
-                            padding:0.4rem 0;
-                            
-                        }
-                    }
-                    
-                }
-            }
+            }                
         }
     }
 }
 
 @media screen and (max-width:900px){
+    header{
+        section#top{
+            nav.navbar{
+                li{
+                   font-size:0.8rem;
+                }
+            }
+        }
+    }
+
     main{
         section#cover{
             display:flex;
@@ -438,9 +442,13 @@ footer{
     }
 }
 
-@media screen and (max-width:580px){
+@media screen and (max-width:750px){
     header{
         section#top{
+
+            nav.navbar{
+                display:none;
+            }
 
             span.title{
                 img{
@@ -450,6 +458,25 @@ footer{
 
                 h1{
                     font-size:1.2rem;
+                }
+            }
+
+            div.container{
+                margin-right:2vw;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                align-items:center;
+                width:36px;
+                height:36px;
+                border:solid 1.5px black;
+                border-radius:0.5rem;
+                padding:1px 0;
+                cursor:pointer;
+    
+                div.bar1, div.bar2, div.bar3{
+                    height:3px;
+                    width:70%;
                 }
             }
         }
