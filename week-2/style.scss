@@ -40,11 +40,6 @@ header{
     div.container{
         display:none;
         background-color:white;
-
-        div.bar1, div.bar2, div.bar3{
-            height:0.1px;
-            background-color:black;
-        }
     }
 
     div.containerX{
@@ -178,38 +173,40 @@ main{
             height:36px;
             border:solid 1.5px black;
             border-radius:0.5rem;
-            padding:1px 0;
+            padding:0;
             cursor:pointer;
-
-            div.bar1, div.bar2, div.bar3{
-                height:3px;
-                width:70%;
-            }
-        }
-
-        div.containerX{
-            margin-right:2vw;
-            width:36px;
-            height:36px;
-            border:solid 1.5px black;
-            border-radius:0.5rem;
-            cursor:pointer;
-    
-            div.isX{
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                font-size:160%;
-                padding:0.01% 0;          
-            }
         }
     }
     
-    
+    main{
+        div.navRWD{
+            display:block;
+            background-color:darkgrey;
+            ul{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:space-around;
+                list-style-type:none;
+                    
+                li{ 
+                    display:flex;
+                    justify-content:center;
+                    padding:5px 0;
+                    width:100%;
+                    font-size:1.2rem;
+                    cursor:pointer;
+                }
+        
+                li:hover{
+                    background-color:rgb(63, 62, 62);
+                    color:white;
+                }
+            }
+    }
 }
 
 @media screen and (max-width: 500px){
-    main{
         section.bottom, section.more{
             section.upper, section.lower{
                 flex-direction:column;
@@ -221,5 +218,14 @@ main{
             }
             
         }
+    }
+}
+
+@keyframes scaleUp {
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
     }
 }
