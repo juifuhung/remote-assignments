@@ -11,6 +11,8 @@ header{
     align-items:center;
     height:42px;
     width:100vw;
+    position:sticky;
+    top:0%;
     
     section.title{
         margin-left:2vw;
@@ -48,13 +50,12 @@ header{
 }
 
 main{
-    width:100vw;
-
     div.navRWD{
         display:none;
     }
 
     section.top{
+        height:40%;
         text-align:center;
         padding:8vh 0;
         background-color:#ccddee;
@@ -182,6 +183,9 @@ main{
         div.navRWD{
             display:block;
             background-color:darkgrey;
+            position:fixed;
+            width:100%;
+            z-index:99;
             ul{
                 display:flex;
                 flex-direction:column;
@@ -196,6 +200,7 @@ main{
                     width:100%;
                     font-size:1.2rem;
                     cursor:pointer;
+                    transition: all 0.5s;
                 }
         
                 li:hover{
