@@ -82,7 +82,7 @@ avg({
   }]
   }); //350
 
-//Assignment 5: Algorithm Practive (Advanced Optional)
+//Assignment 5: Algorithm Practice (Advanced Optional)
 function twoSum(nums, target){
   for(let i=0; i<=nums.length; i++){
     for(let j=i+1; j<=nums.length; j++){
