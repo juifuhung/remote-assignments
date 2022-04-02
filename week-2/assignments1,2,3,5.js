@@ -9,8 +9,8 @@ function max(numbers){
   console.log(max);
 }
   
-max([1, 2, 4, 5]); // result to 5
-max([5, 2, 7, 1, 6]); // result to 7
+max([1, 2, 4, 5]); // 5
+max([5, 2, 7, 1, 6]); //7
 
 //Assignment 2: Object
 let args =  {n1:1,n2:2,op:"+"}
