@@ -1,3 +1,4 @@
+//Request1: Click to Change Text
 let welcome = document.querySelector("main section.top h2");
 welcome.addEventListener("click", () => {
     if(welcome.innerText === "Welcome Message"){
@@ -7,6 +8,7 @@ welcome.addEventListener("click", () => {
     }
 })
 
+//Request 2: Click to Show/Close Menu
 let container = document.querySelector("div.container");
 let newNav = document.querySelector("div.navRWD");
 container.addEventListener("click", () => {
@@ -27,14 +29,21 @@ container.addEventListener("click", () => {
     newUL.appendChild(newItem3);
     newUL.appendChild(newItem4);
     newNav.appendChild(newUL);
+
+    newNav.style.right = "0";
+    newNav.style.height = "100%";
+
   } else {
     container.innerHTML = '<i class="fa-solid fa-xl fa-bars"></i>';
     let newUL = document.querySelector("div.navRWD ul");
-      newUL.remove();
+    if(newUL){
+        newUL.remove();
+        newNav.style.height = "0";
+    }
   }
 });
  
-
+//Request 3: Click to Show More Content Boxes
 let CallToAction = document.querySelector("section.button button");
 let moreContents = document.querySelector("section.more");
 CallToAction.addEventListener("click", () => {
