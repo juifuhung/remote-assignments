@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  width: 100vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+}
+
+header section.title {
+  margin-left: 2vw;
+}
+
+header section.title h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+header section.navbar {
+  margin-right: 2vw;
+  min-width: 20vw;
+}
+
+header section.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+header section.navbar ul li:hover {
+  cursor: pointer;
+}
+
+header div.container {
+  display: none;
+  background-color: white;
+}
+
+header div.containerX {
+  display: none;
+}
+
+main div.navRWD {
+  display: none;
+}
+
+main section.top {
+  height: 40%;
+  text-align: center;
+  padding: 8vh 0;
+  background-color: #ccddee;
+}
+
+main section.top h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+main section.top h2:hover {
+  cursor: pointer;
+}
+
+main section.center {
+  text-align: center;
+  padding: 2vh 0;
+}
+
+main section.center h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+main section.bottom, main section.new-content-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+}
+
+main section.bottom section.upper, main section.new-content-box section.upper {
+  padding: 10px 10px 5px 10px;
+}
+
+main section.bottom section.lower, main section.new-content-box section.lower {
+  padding: 5px 10px 10px 10px;
+}
+
+main section.bottom section.upper, main section.bottom section.lower, main section.new-content-box section.upper, main section.new-content-box section.lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+main section.bottom div, main section.new-content-box div {
+  background-color: #8899aa;
+  height: 100%;
+  width: 600px;
+  padding-top: 10px;
+}
+
+main section.bottom div h4, main section.new-content-box div h4 {
+  text-align: center;
+}
+
+main section.bottom div.top-left, main section.bottom div.bottom-left, main section.new-content-box div.top-left, main section.new-content-box div.bottom-left {
+  margin-right: 5px;
+}
+
+main section.bottom div.top-right, main section.bottom div.bottom-right, main section.new-content-box div.top-right, main section.new-content-box div.bottom-right {
+  margin-left: 5px;
+}
+
+main section.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15vh;
+}
+
+main section.button button {
+  padding: 0.8rem 0.8rem;
+  border: none;
+  background-color: #daecff;
+}
+
+main section.button button h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+main section.button button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  main section.bottom div, main section.more div {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header section.navbar {
+    display: none;
+  }
+  header div.container {
+    margin-right: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 36px;
+    height: 36px;
+    border: solid 1.5px black;
+    border-radius: 0.5rem;
+    padding: 0;
+    cursor: pointer;
+  }
+  main div.navRWD {
+    display: block;
+    background-color: darkgrey;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+  }
+  main div.navRWD ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style-type: none;
+  }
+  main div.navRWD ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5px 0;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  main div.navRWD ul li:hover {
+    background-color: #3f3e3e;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-width: 500px) {
+  section.bottom section.upper, section.bottom section.lower, section.more section.upper, section.more section.lower {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  section.bottom section.upper div, section.bottom section.lower div, section.more section.upper div, section.more section.lower div {
+    margin: 5px 0;
+  }
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
