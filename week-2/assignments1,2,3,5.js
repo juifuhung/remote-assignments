@@ -93,4 +93,4 @@ function twoSum(nums, target){
   }
 }
 
-twoSum([2,7,11,19], 9);
+twoSum([2,7,11,19], 9); //[0,1]
