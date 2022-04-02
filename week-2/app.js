@@ -8,30 +8,32 @@ welcome.addEventListener("click", () => {
 })
 
 let container = document.querySelector("div.container");
-let newNav = document.querySelector("main div.navRWD");
+let newNav = document.querySelector("div.navRWD");
 container.addEventListener("click", () => {
-        if(container.innerHTML === '<i class="fa-solid fa-xl fa-bars"></i>'){
-            container.innerHTML = '<i class="fa-solid fa-xl fa-xmark"></i>';
-            let newUL = document.createElement("ul");
-            let newItem1 = document.createElement("li");
-            newItem1.innerText = "Item 1";
-            let newItem2 = document.createElement("li");
-            newItem2.innerText = "Item 2";
-            let newItem3 = document.createElement("li");
-            newItem3.innerText = "Item 3";
-            let newItem4 = document.createElement("li");
-            newItem4.innerText = "Item 4";
-            newUL.appendChild(newItem1);
-            newUL.appendChild(newItem2);
-            newUL.appendChild(newItem3);
-            newUL.appendChild(newItem4);
-            newNav.appendChild(newUL);
-        } else {
-            container.innerHTML = '<i class="fa-solid fa-xl fa-bars"></i>';
-            let newUL = document.querySelector("main div.navRWD ul");
-            newUL.remove();
-        }
-})
+  console.log(container.innerHTML);
+  if (container.innerHTML.includes('<i class="fa-solid fa-xl fa-bars"></i>')) {
+    container.innerHTML = '<i class="fa-solid fa-xl fa-xmark"></i>';
+    let newUL = document.createElement("ul");
+    let newItem1 = document.createElement("li");
+    newItem1.innerText = "Item 1";
+    let newItem2 = document.createElement("li");
+    newItem2.innerText = "Item 2";
+    let newItem3 = document.createElement("li");
+    newItem3.innerText = "Item 3";
+    let newItem4 = document.createElement("li");
+    newItem4.innerText = "Item 4";
+    newUL.appendChild(newItem1);
+    newUL.appendChild(newItem2);
+    newUL.appendChild(newItem3);
+    newUL.appendChild(newItem4);
+    newNav.appendChild(newUL);
+  } else {
+    container.innerHTML = '<i class="fa-solid fa-xl fa-bars"></i>';
+    let newUL = document.querySelector("div.navRWD ul");
+      newUL.remove();
+  }
+});
+ 
 
 let CallToAction = document.querySelector("section.button button");
 let moreContents = document.querySelector("section.more");
