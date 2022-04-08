@@ -12,26 +12,29 @@ app.set('view engine', 'pug');
 app.get('/myName', (req,res) => {
     let checkName = req.cookies.name;
     if(checkName){
-        res.render('myName', {namme: req.cookies.name})
+        res.render('myName', {name: req.cookies.name})
     } else {
         res.render('trackName');
     }
 })
 
-//Assignment 4-3~4-4
+app.get('/myName', (req,res) => {
+    res.render('myName', {name: req.cookies.name});
+});
+
 app.get('/trackName', (req,res) => {
-    res.cookie('name', req.query.name);
+    res.cookie('name', req.query.name); 
     res.render('trackName');
 });
 
-//Assignment 4-5 not completed
+//4-5 not working
 app.get('/trackName', (req,res) => {
     res.redirect('myName');
 });
 
 //trackName用post ok
 // app.get('/myName', (req,res) => {
-//     res.render('myName', {namme: req.cookies.name});
+//     res.render('myName', {name: req.cookies.name});
 // });
 
 // app.get('/trackName', (req,res) => {
