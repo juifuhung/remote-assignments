@@ -14,23 +14,37 @@ app.get('/myName', (req,res) => {
     if(checkName){
         res.render('myName', {name: req.cookies.name})
     } else {
-        res.render('trackName');
+        res.redirect('trackName');
     }
-})
-
-app.get('/myName', (req,res) => {
-    res.render('myName', {name: req.cookies.name});
 });
 
-app.get('/trackName', (req,res) => {
-    res.cookie('name', req.query.name); 
-    res.render('trackName');
-});
+//Problem 1: cannot save to cookies
+// app.get('/myName', (req,res) => {
+//     res.render('myName', {name: req.cookies.name});
+// });
 
-//4-5 not working
-app.get('/trackName', (req,res) => {
-    res.redirect('myName');
-});
+// app.get('/trackName', (req,res) => { 
+//     res.render('trackName'); 
+// });
+
+// app.get('/trackName', (req,res) => {
+//     res.cookie('name', req.query.name);
+//     res.redirect('myName');
+// });
+//Problem 1: cannot save to cookies
+
+
+//Problem 2: cannot redirect
+// app.get('/trackName', (req,res) => {
+//     res.cookie('name', req.query.name); 
+//     res.render('trackName'); 
+// });
+
+// // 4-5 not working
+// app.get('/trackName', (req,res) => {
+//     res.redirect('myName');
+// });
+//Problem 2: cannot redirect
 
 //trackName用post ok
 // app.get('/myName', (req,res) => {
