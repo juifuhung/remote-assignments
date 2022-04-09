@@ -8,7 +8,9 @@ app.get("/getData", (req,res) => {
     } else if(isNaN(req.query.number)){
         result = "Wrong Parameter";
     } else {
-        result = ((1 + Number(req.query.number))*Number(req.query.number))/2;
+        for(let i=0; i<=req.query.number; i++){
+            result += i;
+        }
     }
     res.send(`${result}`);
 });
