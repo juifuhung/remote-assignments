@@ -1,0 +1,10 @@
+doctype html
+html(lang="en")
+  head
+    title SUM
+  body
+    div#content
+      form(action='/getData', method='post')
+        label Please enter your number 
+          input(type='number', name='number')
+        button(type='submit') Give me the sum !!
