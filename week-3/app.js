@@ -20,7 +20,7 @@ app.get("/getData", (req,res) => {
     let result = 0;
     if(!req.query.number){
         result = "Lack of Parameter";
-    } else if(isNaN(req.query.number)){
+    } else if(isNaN(req.query.number) || (req.query.number % 1 !== 0) || req.query.number < 0){
         result = "Wrong Parameter";
     } else {
         for(let i=0; i<=req.query.number; i++){
