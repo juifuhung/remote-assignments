@@ -7,23 +7,24 @@
     <title>Assignement 3</title>
 </head>
 <body>
-    <form action="/sum.html" method="POST">
-        <label for="number">Enter a number:</label><br>
-        <input type="text" id="inputNumber" name="number"><br>
-        <button type="submit" onclick="sendAJAX()">submit</button>
-    </form>
+    <label for="number">Enter a number:</label><br>
+    <input type="text" id="inputNumber" name="number"><br>
+    <button type="submit" onclick="sendAJAX()">submit</button>
+    
     <div id="result"></div>
     <div id="hello"><h2>hello</h2></div>
     <script>
 
         function sendAJAX() {
-            let xhr = new XMLHttpRequest();
+            let inputValue = document.getElementById('inputNumber').value;
+            console.log(inputValue); //show input value
+            const xhr = new XMLHttpRequest();
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
-                document.getElementById('ajax').innerHTML = xhr.responseText;
+                document.getElementById('result').innerHTML = xhr.responseText;
                 }
             };
-            xhr.open('GET', 'http://localhost:3000/getData?number=${input}');
+            xhr.open('GET', `http://localhost:3000/getData?number=${inputValue}`);
             xhr.send();
         }
         
