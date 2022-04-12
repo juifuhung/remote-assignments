@@ -6,7 +6,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title trackName
     body
-        form(action='/trackName',method='get') //在Version 1中的method改成"post"
+        form(action='/trackName',method='POST') 
             label please enter a name
                 input(type='text', name='name')
             button(type='submit') submit
