@@ -32,7 +32,9 @@
         // 把文字放到表格中
         function render(data) {
             const body = document.querySelector('body');
-
+            
+            //可以用迴圈更好
+            
             const tr1 = document.createElement('tr');
 
             const tdName1 = document.createElement('td');
@@ -58,7 +60,9 @@
             tr3.appendChild(tdPrice); //12000
             tr3.appendChild(tdPrice); //"最新的 Chromebook 產品。"
 
-            body.appendChild(tr);
+            body.appendChild(tr1);
+            body.appendChild(tr2);
+            body.appendChild(tr3);
         }
 
         ajax( //What's this?
