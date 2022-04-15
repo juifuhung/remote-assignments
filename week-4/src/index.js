@@ -23,6 +23,7 @@ const Header = () => {
   );
 };
 
+//burger menu not finished
 const Container = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -37,20 +38,6 @@ const Container = () => {
     </div>
   );
 };
-
-// const Container = () => {
-//   const [showMenu, setShowMenu] = useState(false);
-//   let menu;
-
-//   if (showMenu) {
-//   }
-
-//   return (
-//     <div className="container" onClick={() => setShowMenu(!showMenu)}>
-//       <i class="fa-solid fa-xl fa-bars" aria-hidden="true"></i>
-//     </div>
-//   );
-// };
 
 const Nav = () => {
   return (
@@ -100,6 +87,7 @@ const Center = () => {
   );
 };
 
+// not finished
 const Bottom = () => {
   return (
     <section className="bottom">
