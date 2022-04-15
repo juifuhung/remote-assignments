@@ -25,10 +25,10 @@ const Header = () => {
 
 const Container = () => {
   const [showMenu, setShowMenu] = useState(false);
-  let menu;
 
   if (showMenu) {
-    menu = "menu";
+    //change font-awesome to X
+    //show side bar
   }
 
   return (
