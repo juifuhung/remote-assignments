@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <table>
+        <tr class="head">
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr class="body"></tr>
+    </table>
+    <script>
+        
+        function ajax(src, callback) {
+            let xhr = new XMLHttpRequest;
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    let data = JSON.parse(xhr.responseText);
+                    // get data
+                }
+            }
+            xhr.open("GET", ); //what URL
+            xhr.send();
+        }
+
+        // Render data to table
+        function render(data) {
+            const body = document.querySelector('body');
+
+            const tr1 = document.createElement('tr');
+
+            const tdName1 = document.createElement('td');
+            const tdPrice1 = document.createElement('td');
+            const tdDesc1 = document.createElement('td');
+            tr1.appendChild(tdName); //"Pixel 3"
+            tr1.appendChild(tdPrice); //27700
+            tr1.appendChild(tdPrice); //"最新的 Google 手機。"
+
+            const tr2 = document.createElement('tr');
+
+            const tdName2 = document.createElement('td');
+            const tdPrice2 = document.createElement('td');
+            const tdDesc2 = document.createElement('td');
+            tr2.appendChild(tdName); //"Chromecast"
+            tr2.appendChild(tdPrice); //1500
+            tr2.appendChild(tdPrice); //"在大螢幕上播放喜歡的影片。"
+
+            const tdName3 = document.createElement('td');
+            const tdPrice3 = document.createElement('td');
+            const tdDesc3 = document.createElement('td');
+            tr3.appendChild(tdName); //"Pixel Book"
+            tr3.appendChild(tdPrice); //12000
+            tr3.appendChild(tdPrice); //"最新的 Chromebook 產品。"
+
+            body.appendChild(tr);
+        }
+
+        ajax( //What's this?
+            "https://appworks-school.github.io/Remote-Aassigiment-Data/products",
+            function (response) {
+                render(response);
+            }
+        )
+    </script>
+</body>
+</html>
