@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  width: 100vw;
+}
+
+.header section.title {
+  margin-left: 2vw;
+}
+
+.header section.title h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.header section.navbar {
+  margin-right: 2vw;
+  min-width: 20vw;
+}
+
+.header section.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.header section.navbar ul li:hover {
+  cursor: pointer;
+}
+
+.header span.container {
+  display: none;
+  background-color: white;
+}
+
+.main {
+  width: 100vw;
+  padding-top: 42px;
+}
+
+.main .burger-menu {
+  display: none;
+}
+
+.main section.top {
+  text-align: center;
+  padding: 8vh 0;
+  background-color: #ccddee;
+}
+
+.main section.top h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.main section.top h2:hover {
+  cursor: pointer;
+}
+
+.main section.center {
+  text-align: center;
+  padding: 2vh 0;
+}
+
+.main section.center h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.main section.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90%;
+}
+
+.main section.bottom section.boxes {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50vh;
+}
+
+.main section.bottom section.boxes section.upper {
+  padding: 10px 10px 5px 10px;
+}
+
+.main section.bottom section.boxes section.lower {
+  padding: 5px 10px 10px 10px;
+}
+
+.main section.bottom section.boxes section.upper, .main section.bottom section.boxes section.lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.main section.bottom section.boxes div {
+  background-color: #8899aa;
+  height: 100%;
+  width: 600px;
+  padding-top: 10px;
+}
+
+.main section.bottom section.boxes div h4 {
+  text-align: center;
+}
+
+.main section.bottom section.boxes div.top-left, .main section.bottom section.boxes div.bottom-left {
+  margin-right: 5px;
+}
+
+.main section.bottom section.boxes div.top-right, .main section.bottom section.boxes div.bottom-right {
+  margin-left: 5px;
+}
+
+.main section.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15vh;
+}
+
+.main section.button button {
+  padding: 0.8rem 0.8rem;
+  border: none;
+  background-color: #daecff;
+}
+
+.main section.button button h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.main section.button button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .main section.bottom div {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header section.navbar {
+    display: none;
+  }
+  .header span.container {
+    margin-right: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 36px;
+    height: 36px;
+    border: solid 1.5px black;
+    border-radius: 0.5rem;
+    padding: 1px 0;
+    cursor: pointer;
+  }
+  .header span.container div.bar1, .header span.container div.bar2, .header span.container div.bar3 {
+    height: 3px;
+    width: 70%;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .main .top, .main .center, .main .bottom {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .burger-menu {
+    background-color: darkgrey;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style-type: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 35%;
+    height: 100%;
+  }
+  .main .burger-menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .main .burger-menu li:hover {
+    background-color: #3f3e3e;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main section.bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 0;
+  }
+  .main section.bottom section.boxes section.upper, .main section.bottom section.boxes section.lower {
+    height: 80vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .main section.bottom section.boxes section.upper div, .main section.bottom section.boxes section.lower div {
+    width: 100%;
+    height: 50%;
+    margin: 5px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
