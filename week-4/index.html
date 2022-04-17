@@ -14,7 +14,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <h1>hi</hi>
+      
     </div>
     <!--
       This HTML file is a template.
@@ -29,10 +29,8 @@
 
   </head>
   <body>
-    <div id="root"></div>
-    <script type="text/babel">
-    
-    const App = () => {
+    <div id="root">
+      const App = () => {
   const [showMenu, setShowMenu] = useState(true);
 
   return (
@@ -181,7 +179,11 @@ const Boxes = () => {
 
       const container = document.getElementById('root');
       const root = ReactDOM.createRoot(container);
-      root.render(<MyApp />);
+      root.render(<MyApp />);    
+    </div>
+    <script type="text/babel">
+    
+    
 
     </script>
     <!--
