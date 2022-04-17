@@ -1,44 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>React App</title>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="text/babel">
+    
+    const App = () => {
+  const [showMenu, setShowMenu] = useState(true);
+
+  return (
+    <div>
+      <Header showMenu={showMenu} setShowMenu={setShowMenu} />
+      <Main showMenu={showMenu} setShowMenu={setShowMenu} />
+    </div>
+  );
+};
+
+const Header = ({ showMenu, setShowMenu }) => {
+  return (
+    <div className="header">
+      <section className="title">
+        <h1>Website Title / Logo</h1>
+      </section>
+      <Container showMenu={showMenu} setShowMenu={setShowMenu} />
+      <Nav />
+    </div>
+  );
+};
+
+const Container = ({ showMenu, setShowMenu }) => {
+  const showSideMenu = () => setShowMenu(!showMenu);
+
+  const showBar = showMenu ? (
+    <i class="fa-solid fa-xl fa-bars" aria-hidden="true"></i>
+  ) : (
+    <i class="fa-solid fa-xl fa-xmark"></i>
+  );
+
+  return (
+    <span className="container" onClick={() => showSideMenu(!showMenu)}>
+      {showBar}
+    </span>
+  );
+};
+
+const Menu = () => {
+  return (
+    <ul className="burger-menu">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  );
+};
+
+class Nav extends React.Component {
+  render() {
+    return (
+      <section className="navbar">
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </section>
+    );
+  }
+}
+
+const Main = ({ showMenu, setShowMenu }) => {
+  const showSideBar = () => setShowMenu(!showMenu);
+
+  const showSide = showMenu ? null : <Menu />;
+
+  return (
+    <div className="main">
+      {showSide}
+      <Top className="top" />
+      <Center className="Center" />
+      <Bottom />
+    </div>
+  );
+};
+
+const Top = () => {
+  let [message, changeContent] = useState("Welcome Message");
+  const changeMessage = () => {
+    if (message === "Welcome Message") {
+      changeContent("Have a Good Time!");
+    } else {
+      changeContent("Welcome Message");
+    }
+  };
+
+  return (
+    <section className="top" onClick={changeMessage}>
+      <h2>{message}</h2>
+    </section>
+  );
+};
+
+const Center = () => {
+  return (
+    <section className="center">
+      <h3>Section Title</h3>
+    </section>
+  );
+};
+
+const Bottom = () => {
+  let [more, load] = useState([<Boxes />]);
+  const loadMore = () => {
+    load([...more, <Boxes />]);
+  };
+
+  return (
+    <section className="bottom">
+      {more}
+      <section className="button" onClick={loadMore}>
+        <button>
+          {" "}
+          <h4>Call to Action</h4>
+        </button>
+      </section>
+    </section>
+  );
+};
+
+const Boxes = () => {
+  return (
+    <section className="boxes">
+      <section className="upper">
+        <div className="top-left">
+          <h4>Content Box 1</h4>
+        </div>
+        <div className="top-right">
+          <h4>Content Box 2</h4>
+        </div>
+      </section>
+      <section className="lower">
+        <div className="bottom-left">
+          <h4>Content Box 3</h4>
+        </div>
+        <div className="bottom-right">
+          <h4>Content Box 4</h4>
+        </div>
+      </section>
+    </section>
+  );
+};
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+
+    </script>
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
     -->
   </body>
 </html>
