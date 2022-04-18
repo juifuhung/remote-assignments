@@ -49,6 +49,83 @@
             );
           }
         }
+        
+      const Main = () => {
+          return (
+            <div className="main">
+              <Top className="top" />
+              <Center className="Center" />
+              <Bottom />
+            </div>
+          );
+        };
+
+        const Top = () => {
+          let [message, changeContent] = useState("Welcome Message");
+          const changeMessage = () => {
+            if (message === "Welcome Message") {
+              changeContent("Have a Good Time!");
+            } else {
+              changeContent("Welcome Message");
+            }
+          };
+
+          return (
+            <section className="top" onClick={changeMessage}>
+              <h2>{message}</h2>
+            </section>
+          );
+        };
+
+        const Center = () => {
+          return (
+            <section className="center">
+              <h3>Section Title</h3>
+            </section>
+          );
+        };
+
+        const Bottom = () => {
+          let [more, load] = useState([<Boxes />]);
+          const loadMore = () => {
+            load([...more, <Boxes />]);
+          };
+
+          return (
+            <section className="bottom">
+              {more}
+              <section className="button" onClick={loadMore}>
+                <button>
+                  {" "}
+                  <h4>Call to Action</h4>
+                </button>
+              </section>
+            </section>
+          );
+        };
+
+        const Boxes = () => {
+          return (
+            <section className="boxes">
+              <section className="upper">
+                <div className="top-left">
+                  <h4>Content Box 1</h4>
+                </div>
+                <div className="top-right">
+                  <h4>Content Box 2</h4>
+                </div>
+              </section>
+              <section className="lower">
+                <div className="bottom-left">
+                  <h4>Content Box 3</h4>
+                </div>
+                <div className="bottom-right">
+                  <h4>Content Box 4</h4>
+                </div>
+              </section>
+            </section>
+          );
+        };
 
       const container = document.getElementById('root');
       const root = ReactDOM.createRoot(container);
