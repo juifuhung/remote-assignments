@@ -15,13 +15,12 @@
     <div id="root"></div>
     <script type="text/babel">
 
-        const Header = ({ showMenu, setShowMenu }) => {
+        const Header = () => {
           return (
             <div className="header">
               <section className="title">
                 <h1>Website Title / Logo</h1>
               </section>
-              <Container showMenu={showMenu} setShowMenu={setShowMenu} />
               <Nav />
             </div>
           );
@@ -29,11 +28,10 @@
         
          
        const App = () => {
-              const [showMenu, setShowMenu] = useState(true);
 
               return (
                 <div>
-                  <Header showMenu={showMenu} setShowMenu={setShowMenu} />
+                  <Header/>
                 </div>
               );
             };
