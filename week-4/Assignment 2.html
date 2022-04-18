@@ -17,16 +17,11 @@
     </table>
     <script>
         
-        function ajax(src, callback) {
-            let xhr = new XMLHttpRequest;
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4) {
-                    let data = JSON.parse(xhr.responseText);
-                    // get data
-                }
-            }
-            xhr.open("GET", ); //what URL
-            xhr.send();
+        function ajax(src, callback){
+            fetch(src)
+                .then(response => response.json())
+                .then(data => callback(data))
+                .catch(error => console.log('AJAX call failed', error))
         }
 
         // 把文字放到表格中
