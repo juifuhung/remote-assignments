@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hell World</title>
+    <title>Hellooooo World</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <link rel="stylesheet" href="./style.css" />
@@ -86,15 +86,9 @@
         };
 
         const Bottom = () => {
-          let [more, load] = useState([<Boxes />]);
-          const loadMore = () => {
-            load([...more, <Boxes />]);
-          };
-
           return (
             <section className="bottom">
-              {more}
-              <section className="button" onClick={loadMore}>
+              <section className="button">
                 <button>
                   {" "}
                   <h4>Call to Action</h4>
