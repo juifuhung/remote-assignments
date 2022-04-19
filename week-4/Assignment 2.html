@@ -26,46 +26,26 @@
 
         // 把文字放到表格中
         function render(data) {
-            const body = document.querySelector('body');
-            
-            //可以用迴圈更好
-            
-            const tr1 = document.createElement('tr');
+          const table = document.getElementById('myTable');
 
-            const tdName1 = document.createElement('td');
-            const tdPrice1 = document.createElement('td');
-            const tdDesc1 = document.createElement('td');
-            tr1.appendChild(tdName); //"Pixel 3"
-            tr1.appendChild(tdPrice); //27700
-            tr1.appendChild(tdPrice); //"最新的 Google 手機。"
+            for(let i=0; i < data.length; i++){
+              let row = `<tr>
+                            <td>${data[i].name}</td>
+                            <td>${data[i].price}</td>
+                            <td>${data[i].description}</td>
+                         </tr>`
+              table.innerHTML += row;
+            }
+        }  
+          
 
-            const tr2 = document.createElement('tr');
-
-            const tdName2 = document.createElement('td');
-            const tdPrice2 = document.createElement('td');
-            const tdDesc2 = document.createElement('td');
-            tr2.appendChild(tdName); //"Chromecast"
-            tr2.appendChild(tdPrice); //1500
-            tr2.appendChild(tdPrice); //"在大螢幕上播放喜歡的影片。"
-
-            const tdName3 = document.createElement('td');
-            const tdPrice3 = document.createElement('td');
-            const tdDesc3 = document.createElement('td');
-            tr3.appendChild(tdName); //"Pixel Book"
-            tr3.appendChild(tdPrice); //12000
-            tr3.appendChild(tdPrice); //"最新的 Chromebook 產品。"
-
-            body.appendChild(tr1);
-            body.appendChild(tr2);
-            body.appendChild(tr3);
-        }
-
-        ajax( //What's this?
+        ajax(
             "https://appworks-school.github.io/Remote-Aassigiment-Data/products",
             function (response) {
                 render(response);
             }
         )
+        
     </script>
 </body>
 </html>
